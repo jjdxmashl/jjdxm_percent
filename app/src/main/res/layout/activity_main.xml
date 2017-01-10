@@ -1,0 +1,132 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<LinearLayout android:id="@+id/drawer_layout"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainActivity">
+
+    <android.support.percent.PercentFrameLayout
+        xmlns:appfl="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/top_left"
+            android:layout_gravity="bottom|end"
+            android:background="#ff00ff22"
+            appfl:layout_heightPercent="30%"
+            appfl:layout_widthPercent="30%"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#ffe40000"
+            appfl:layout_heightPercent="30%"
+            appfl:layout_widthPercent="30%"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:background="#ff44aacc"
+            appfl:layout_heightPercent="60%"
+            appfl:layout_widthPercent="60%"/>
+
+    </android.support.percent.PercentFrameLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        xmlns:apprl="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <View
+            android:id="@+id/row_one_item_one"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:background="#5182bb"
+            apprl:layout_heightPercent="50%"
+            apprl:layout_widthPercent="30%"/>
+
+        <View
+            android:id="@+id/row_one_item_two"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_toRightOf="@+id/row_one_item_one"
+            android:background="#396190"
+            apprl:layout_heightPercent="50%"
+            apprl:layout_widthPercent="30%"/>
+
+        <View
+            android:id="@+id/row_one_item_three"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_toRightOf="@+id/row_one_item_two"
+            android:background="#8fb5e1"
+            apprl:layout_heightPercent="50%"
+            apprl:layout_widthPercent="40%"/>
+
+        <View
+            android:id="@+id/row_two_item_one"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/row_one_item_one"
+            android:background="#d89695"
+            apprl:layout_heightPercent="50%"
+            apprl:layout_marginLeftPercent="50%"/>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <com.dou361.percent.PercentLinearLayout
+        xmlns:appll="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#ff4400cc"
+            android:gravity="center"
+            android:text="width:60%,height:20%"
+            android:textColor="#ffffff"
+            appll:layout_heightPercent="20%"
+            appll:layout_marginBottomPercent="5%"
+            appll:layout_widthPercent="60%"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#ff44aacc"
+            android:gravity="center"
+            android:text="width:80%,height:30%"
+            android:textColor="#ffffff"
+            appll:layout_heightPercent="30%"
+            appll:layout_marginBottomPercent="5%"
+            appll:layout_widthPercent="80%"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#ff4400cc"
+            android:gravity="center"
+            android:text="width:100%,height:40%"
+            android:textColor="#ffffff"
+            appll:layout_heightPercent="40%"
+            appll:layout_marginBottomPercent="5%"/>
+
+
+    </com.dou361.percent.PercentLinearLayout>
+
+</LinearLayout>
