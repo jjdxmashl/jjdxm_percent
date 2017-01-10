@@ -31,18 +31,18 @@
 Download or grab via Maven:
 
 	<dependency>
-	  <groupId>percent</groupId>
+	  <groupId>com.dou361.percent</groupId>
 	  <artifactId>jjdxm-percent</artifactId>
 	  <version>x.x.x</version>
 	</dependency>
 
 or Gradle:
 
-	compile 'percent:jjdxm-percent:x.x.x'
+	compile 'com.dou361.percent:jjdxm-percent:x.x.x'
 
 
 历史版本：
-	compile 'percent:jjdxm-percent:1.0.0'
+	compile 'com.dou361.percent:jjdxm-percent:1.0.0'
 
 jjdxm-percent requires at minimum Java 9 or Android 2.3.
 
@@ -61,7 +61,7 @@ jjdxm-percent requires at minimum Java 9 or Android 2.3.
 ### step1 ###
 需要申请的一些权限已经集成到类库中了,引入依赖，如果主程序项目中有重复的类库，可以用打开注释来移除重复依赖。
 
-	    compile ('percent:jjdxm-percent:1.0.0'){
+	    compile ('com.dou361.percent:jjdxm-percent:1.0.0'){
 	//        exclude group: 'com.android.support', module: 'percent'
 	    }
 
